@@ -124,6 +124,18 @@
 .header-links {
     display: none;
 }
+.header-city {
+    width: 100%;
+    color: #b87680;
+    font-size: 12px;
+    background-color: rgba(255,255,255,1);
+    height: 35px;
+    font-family: 'Montserrat',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 400;
+    padding-left: 23px;
+    display: none;
+}
 .menu-btn {
 	width: 22px;
 	height: 30px;
@@ -159,10 +171,17 @@
     width: 300px;
     z-index: 11;
     background: #fff;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
 	transform: translateX(-100%);
 	transition: transform 0.5s; 
+}
+.overflow {
+    overflow: hidden;
+}
+.main_header-fix {
+    position: fixed;
 }
 .menu.active {
 	transform: translateX(0);
@@ -322,5 +341,27 @@
     .menu-btn-two {
         display: block !important;
         margin-right: 20px;
+    }
+    .menu > nav > ul > li:hover > ul{
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        width: 100%;
+        padding: 18px 0;
+        left: 0;
+        box-shadow: none;
+        margin-top: 0;
+        border-bottom: 1px solid rgba(0,0,0, 0.2);
+    }
+    .menu > nav > ul > li:hover > ul::before {
+        display: none;
+    }
+}
+@media(max-width: 767px) {
+    .main_header {
+        box-shadow: none;
+    }
+    .header-city {
+        display: block;
     }
 }

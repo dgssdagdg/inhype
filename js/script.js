@@ -1,3 +1,12 @@
+window.onscroll = function(){
+    var html = document.documentElement, body = document.body;
+    let BlkStyle = document.querySelector('.main_header')
+    if(html.scrollTop>100||body.scrollTop>100) {
+        BlkStyle.classList.add('main_header-fix');
+    } else BlkStyle.classList.remove('main_header-fix');
+}
+
+
 const swiper = new Swiper('.frame-two-slider-one', {
     loop: true,
   
@@ -14,10 +23,12 @@ const swiperTwo = new Swiper('.frame-two-slider-two', {
 });
 
 window.addEventListener('click', function(event) {
+    let body = document.body;
     let menu = document.querySelector('.menu');
     let menuBlock = document.querySelector('.menu-block');
-    if (event.target.closest('.menu-btn')) {
+    if (event.target.closest('.menu-close')) {
         menu.classList.toggle('active');
         menuBlock.classList.toggle('block-active');
+        body.classList.toggle('overflow');
     }
 })

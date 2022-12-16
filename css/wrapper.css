@@ -108,14 +108,21 @@ main > .content > .frame1 > div > div > a:nth-child(4):hover{
 
 
 main > .content > .frame2{
+    background-color: #fafafa;
     width: 100%;
-    height: 820px;
+    padding-bottom: 105px;
+    padding-top: 75px;
     /* background-color: red; */
+}
+.frame2-one {
+    background-color: #fff !important;
+}
+main > .content > .frame2 > span > marquee {
+    margin-bottom: 70px;
 }
 main > .content > .frame2 > span > marquee,
 main > .content > .frame2 > marquee{
     color: #8f7691;
-    margin-top: 70px;
     font-size: 19px;
     font-family: 'Montserrat',Arial,sans-serif;
     line-height: 1.55;
@@ -126,7 +133,6 @@ main > .content > .frame2 > marquee{
 }
 main > .content > .frame2 > div{
     width: 1200px;
-    height: 430px;
     margin: 0 auto;
     margin-top: 120px;
     /* background-color: red; */
@@ -139,6 +145,7 @@ main > .content > .frame2 > div > .content{
 }
 .frame-block-text {
     position: relative;
+    display: flex;
 }
 .frame-block-text > h3 {
     position: absolute;
@@ -147,7 +154,7 @@ main > .content > .frame2 > div > .content{
     align-items: center;
     justify-content: center;
     height: 60px;
-    top: -30px;
+    top: -15px;
     left: 40%;
     background-color: #fff;
 }
@@ -177,6 +184,7 @@ main > .content > .frame2 > div > div > p{
     border-style: solid;
     margin:0;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 main > .content > .frame2 > div > div > a{
     color: #7a5f7a;
@@ -191,9 +199,13 @@ main > .content > .frame2 > div > div > a{
     margin-top: 20px;
     display: flex;
 }
+main > .content > .frame2 > div > div > a:hover {
+    background: #7a5f7a;
+    color: #fff !important;
+}
 
 main > .content > .frame2 > div > .image{
-    height: 100%;
+    height: 388px;
     width: 47%;
     background-image: url("https://static.tildacdn.com/tild3561-6534-4863-b831-306535373332/28.jpg");
     background-size: cover;
@@ -207,8 +219,19 @@ main > .content > .frame2 > div > .image{
 }
 .frame2-two > div {
     display: flex;
+    
     align-items: center;
 }
+.frame2-btn {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.frame2-btn a {
+    width: 500px;
+}
+.frame2-btn a,
 .frame2-two > div > div > a {
     color: #b87680 !important;
     height: 33px;
@@ -221,6 +244,7 @@ main > .content > .frame2 > div > .image{
     align-items: center;
     justify-content: center;
     border-radius: 0px;
+    text-decoration: none;
     background-position: center center;
     border-color: #b87680 !important;
     border-style: solid;
@@ -342,13 +366,19 @@ main > .content > .frame2 > div > .image{
     border-style: solid;
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
+.product-cart-btn:hover {
+    background-color: #5a706d;
+    color: #fff;
+}
 @media(max-width:1240px){
+    .frame2-two-block {
+        flex-wrap: wrap;
+    }
     .frame-two-slider {
         width: 100% !important;
         margin-right: 0 !important;
     }
     .frame2-two > div {
-        flex-wrap: wrap;
         width: 90% !important;
         justify-content: center;
     }
@@ -356,17 +386,19 @@ main > .content > .frame2 > div > .image{
         margin: 0 !important;
     }
     .frame2-two > div > div > p {
-        font-size: 22px !important;
+        font-size: 18px !important;
     }
     .frame-block-text > h3 {
         left: 32%;
     }
     main > .content > .frame2{
-        height: 1020px;
     }
     main > .content > .frame2 > div{
         width: 100%;
         margin-top: 40px;
+        /* margin-left: 20px;
+        margin-right: 20px; */
+        column-gap: 30px;
     }
     main > .content > .frame2 > div > .content{
         float:none;
@@ -395,6 +427,26 @@ main > .content > .frame2 > div > .image{
 
 }
 @media (max-width: 992px) {
+    main > .content > .frame2 > div > .image {
+        height: 395px;
+    }
+    .frame2-btn {
+        display: flex;
+    }
+    main > .content > .frame2{
+        padding-bottom: 135px;
+        padding-top: 105px;
+    }
+    .frame-two-slider {
+        width: 500px !important;
+        margin: 50px 0;
+    }
+    .frame2-blocks .content a {
+        display: none !important;
+    }
+    .frame2-blocks {
+        flex-wrap: wrap-reverse;
+    }
     .frame-block-text > h3 {
         left: 29%;
     }
@@ -406,6 +458,13 @@ main > .content > .frame2 > div > .image{
     }
 }
 @media (max-width: 767px) {
+    main > .content > .frame2{
+        padding-bottom: 75px;
+    }
+    main > .content > .frame2 > span > marquee,
+    main > .content > .frame2 > marquee {
+        margin-bottom: 0;
+    }
     main > .content > .frame2-two > .content > p,
     main > .content > .frame2 > div > .content > p {
         font-size: 13px !important;
@@ -435,7 +494,6 @@ main > .content > .frame2 > div > .image{
         margin-top: 50px !important;
     }
     main > .content > .frame2 {
-        height: 840px;
     }
     main > .content > .frame2 > div > .content > h3 {
         font-size: 18px;
@@ -746,6 +804,7 @@ main > .content > .frame6 > div > div > div:nth-child(2){
     background-position: center center;
     border-color: transparent;
     border-style: solid;
+    display: none;
 }
 .frame6-block img {
     width: 316px;
@@ -800,8 +859,15 @@ main > .content > .frame-auto > div > div > div {
     .form-btn {
         background-color: #858585;
     }
+    .form-title {
+        display: flex;
+    }
 }
 @media (max-width:992px) {
+    .frame-auto {
+        padding-top: 120px;
+        padding-bottom: 90px;
+    }
     .product-cart-box .product-cart-box-link {
         display: inline-flex;
     }
@@ -877,6 +943,9 @@ main > .content > .frame-auto > div > div > div {
     }
 }
 @media (max-width: 767px)  {
+    .frame-auto {
+        background-color: #f7f7f7 !important;
+    }
     .product-cart-block {
         height: 352px;
     }
@@ -953,7 +1022,7 @@ main > .content > .frame9{
     width: 100%;
     height: 900px;
     display: flex;
-    background-color: #f7f7f7;
+    background-color: #fff;
     align-items: center;
     justify-content: center;
 }
@@ -1005,6 +1074,9 @@ main > .content > .frame9 > .map > iframe {
     }
 }
 @media (max-width: 767px) {
+    .frame9 {
+        padding-top: 70px;
+    }
     main > .content > .frame9 > .map,
     main > .content > .frame9 > .content{
         width: 100%;
