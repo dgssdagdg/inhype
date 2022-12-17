@@ -31,4 +31,14 @@ window.addEventListener('click', function(event) {
         menuBlock.classList.toggle('block-active');
         body.classList.toggle('overflow');
     }
+    let city = document.querySelector('.city');
+    if (event.target.closest('.city-open')) {
+
+        city.classList.toggle('city-active');
+        body.classList.toggle('overflow');
+    } else  if (!event.target.closest('.city-row') && city.closest('.city-active')) {
+        city.classList.remove('city-active')
+        body.classList.remove('overflow');
+    }
+
 })
