@@ -40,5 +40,5 @@ window.addEventListener('click', function(event) {
         city.classList.remove('city-active')
         body.classList.remove('overflow');
     }
-
+    return false;
 })

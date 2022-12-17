@@ -135,6 +135,7 @@
     font-weight: 400;
     padding-left: 23px;
     display: none;
+    cursor: pointer;
 }
 .menu-btn {
 	width: 22px;
@@ -144,6 +145,7 @@
 	overflow: hidden;
     display: none;
     margin-left: 20px;
+    cursor: pointer;
 }
 .menu-btn span {
 	width: 22px;

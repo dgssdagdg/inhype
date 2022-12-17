@@ -6,6 +6,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    overflow: hidden;
 }
 main > .content > .frame1{
     width: 100%;
@@ -926,6 +927,7 @@ main > .content > .frame-auto > div > div > div {
     right: 20px;
     top: 20px;
     padding: 10px;
+    cursor: pointer;
 }
 .city-active {
     transform: translatey(0%);
